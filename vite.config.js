@@ -6,7 +6,6 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,     // dev port, optional in Docker
-    open: false     // DO NOT open browser in container
   },
   preview: {
     port: 4173,     // matches container targetPort
