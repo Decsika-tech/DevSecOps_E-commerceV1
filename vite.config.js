@@ -5,11 +5,13 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 3000, // Optional: Keep the same port as CRA
-    allowedHosts: [
-    'a9d24332604574c5489d8edd7d6a1bed-709405611.ap-south-1.elb.amazonaws.com'
-      // or use '*' to allow all hosts (not recommended for production)
-    ]
-    open: true // Optional: Automatically open the app in the browser
+    port: 3000,     // dev port, optional in Docker
+    open: false     // DO NOT open browser in container
+  },
+  preview: {
+    port: 4173,     // matches container targetPort
+    host: true,     // allow external access (K8s pod)
+    strictPort: true,
+    allowedHosts: ['a9d24332604574c5489d8edd7d6a1bed-709405611.ap-south-1.elb.amazonaws.com']
   }
 })
