@@ -11,7 +11,6 @@ export default defineConfig({
   preview: {
     port: 4173,     // matches container targetPort
     host: true,     // allow external access (K8s pod)
-    strictPort: true,
     allowedHosts: ['a9d24332604574c5489d8edd7d6a1bed-709405611.ap-south-1.elb.amazonaws.com']
   }
 })
