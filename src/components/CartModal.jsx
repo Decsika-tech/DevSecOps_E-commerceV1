@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { FaTimes, FaTrash } from 'react-icons/fa';
 import { useCart } from '../context/CartContext';
-import { products } from '../Data/products';
+import { products } from '../data/products';
 
 const CartModal = () => {
   const { 
@@ -148,3 +148,4 @@ const CartModal = () => {
 
 
 export default CartModal;
+
